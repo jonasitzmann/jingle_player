@@ -8,10 +8,10 @@ from pytify.pytifylib import Pytifylib
 
 class PytifyMock:
     def pause(self):
-        logging.info('pause spotify')
+        logging.info("pause spotify")
 
     def play_pause(self):
-        logging.info('play_pause spotify')
+        logging.info("play_pause spotify")
 
 
 def get_pytify(mock=False):
@@ -25,11 +25,9 @@ def pause_spotify(pytify: Optional[Pytifylib] = None, mock=False):
     try:
         pytify.pause()
     except Exception as ex:
-        logging.warning(f'could not pause Spotify: \n {ex}')
+        logging.warning(f"could not pause Spotify: \n {ex}")
     yield
     try:
         pytify.play_pause()
     except Exception as ex:
-        logging.warning(f'could not play_pause Spotify: \n {ex}')
-
-
+        logging.warning(f"could not play_pause Spotify: \n {ex}")
