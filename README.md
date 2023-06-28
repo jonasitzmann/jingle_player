@@ -1,6 +1,7 @@
 # Jingle Player
 
 This is a Python script for scheduling and playing jingles based on a calendar of games.
+
 [![Video](https://img.youtube.com/vi/VPrawxp-m2Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=VPrawxp-m2Q)
 # Requirements
 
