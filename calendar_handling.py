@@ -1,9 +1,10 @@
-from datetime import timezone
 import urllib.request
+from datetime import timezone
+
 import pytz
 from icalendar import Calendar
-from config import CalendarConfig
 
+from config import CalendarConfig
 from datastructures import Game
 
 

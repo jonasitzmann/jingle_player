@@ -1,14 +1,15 @@
-from datastructures import Game
 import logging
-from play_jingle import play_jingle_blocking
+from argparse import ArgumentParser
+from functools import partial
+from runpy import run_path
+from typing import List, Optional
+
 import calendar_handling
 import spotify
-from functools import partial
-from typing import List, Optional
-from scheduler import Scheduler
-from argparse import ArgumentParser
-from runpy import run_path
 from config import Config, Anchor, Jingle
+from datastructures import Game
+from play_jingle import play_jingle_blocking
+from scheduler import Scheduler
 
 
 def schedule_jingles(game_list: List[Game], jingle_list: List[Jingle], play_jingle_func, scheduler: Optional[Scheduler]=None):

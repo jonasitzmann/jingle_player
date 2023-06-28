@@ -1,8 +1,9 @@
-from pytify.cli import get_pytify_class_by_platform
-from typing import Optional
-from pytify.pytifylib import Pytifylib
-from contextlib import contextmanager
 import logging
+from contextlib import contextmanager
+from typing import Optional
+
+from pytify.cli import get_pytify_class_by_platform
+from pytify.pytifylib import Pytifylib
 
 
 class PytifyMock:
