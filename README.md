@@ -48,55 +48,74 @@ python script.py [--config CONFIG_FILE]
 
 ## Example output
 ```
-2023-06-28 10:14:44 INFO   starting jingle player
-2023-07-01 09:00:44 INFO   executing job	Spiel 1: pre_game
-2023-07-01 09:00:44 INFO   pause spotify
-2023-07-01 09:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
-2023-07-01 09:00:44 INFO   play_pause spotify
-2023-07-01 09:00:44 INFO   executing job	Spiel 1: start
-2023-07-01 09:00:44 INFO   pause spotify
-2023-07-01 09:00:44 INFO   playing sound file jingles/start.mp3
-2023-07-01 09:00:44 INFO   play_pause spotify
-2023-07-01 09:40:44 INFO   executing job	Spiel 1: pre_end
-2023-07-01 09:40:44 INFO   pause spotify
-2023-07-01 09:40:44 INFO   playing sound file jingles/pre_end.mp3
-2023-07-01 09:40:44 INFO   play_pause spotify
-2023-07-01 09:45:44 INFO   executing job	Spiel 1: end
-2023-07-01 09:45:44 INFO   pause spotify
-2023-07-01 09:45:44 INFO   playing sound file jingles/end.mp3
-2023-07-01 09:45:44 INFO   play_pause spotify
-2023-07-01 10:00:44 INFO   executing job	Spiel 2: pre_game
-2023-07-01 10:00:44 INFO   pause spotify
-2023-07-01 10:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
-2023-07-01 10:00:44 INFO   play_pause spotify
-2023-07-01 10:00:44 INFO   executing job	Spiel 2: start
-2023-07-01 10:00:44 INFO   pause spotify
-2023-07-01 10:00:44 INFO   playing sound file jingles/start.mp3
-2023-07-01 10:00:44 INFO   play_pause spotify
-2023-07-01 10:40:44 INFO   executing job	Spiel 2: pre_end
-2023-07-01 10:40:44 INFO   pause spotify
-2023-07-01 10:40:44 INFO   playing sound file jingles/pre_end.mp3
-2023-07-01 10:40:44 INFO   play_pause spotify
-2023-07-01 10:45:44 INFO   executing job	Spiel 2: end
-2023-07-01 10:45:44 INFO   pause spotify
-2023-07-01 10:45:44 INFO   playing sound file jingles/end.mp3
-2023-07-01 10:45:44 INFO   play_pause spotify
-2023-07-02 14:00:44 INFO   executing job	Finale: pre_game
-2023-07-02 14:00:44 INFO   pause spotify
-2023-07-02 14:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
-2023-07-02 14:00:44 INFO   play_pause spotify
-2023-07-02 14:00:44 INFO   executing job	Finale: start
-2023-07-02 14:00:44 INFO   pause spotify
-2023-07-02 14:00:44 INFO   playing sound file jingles/start.mp3
-2023-07-02 14:00:44 INFO   play_pause spotify
-2023-07-02 14:40:44 INFO   executing job	Finale: pre_end
-2023-07-02 14:40:44 INFO   pause spotify
-2023-07-02 14:40:44 INFO   playing sound file jingles/pre_end.mp3
-2023-07-02 14:40:44 INFO   play_pause spotify
-2023-07-02 14:45:44 INFO   executing job	Finale: end
-2023-07-02 14:45:44 INFO   pause spotify
-2023-07-02 14:45:44 INFO   playing sound file jingles/end.mp3
-2023-07-02 14:45:44 INFO   play_pause spotify
+Sat 09:27:48 starting jingle player
+Sat 09:27:58 executing job Pool A - Match 1: start
+Sat 09:27:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sat 10:10:00 executing job Pool A - Match 1: pre_end
+Sat 10:10:00 playing sound file jingles/pre_end.mp3
+Sat 10:15:00 executing job Pool A - Match 1: end
+Sat 10:15:00 playing sound file jingles/end.mp3
+Sat 10:27:58 executing job Pool B - Match 1: start
+Sat 10:27:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sat 11:10:00 executing job Pool B - Match 1: pre_end
+Sat 11:10:00 playing sound file jingles/pre_end.mp3
+Sat 11:15:00 executing job Pool B - Match 1: end
+Sat 11:15:00 playing sound file jingles/end.mp3
+Sat 11:17:58 executing job Pool A - Match 2: start
+Sat 11:17:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sat 12:00:00 executing job Pool A - Match 2: pre_end
+Sat 12:00:00 playing sound file jingles/pre_end.mp3
+Sat 12:05:00 executing job Pool A - Match 2: end
+Sat 12:05:00 playing sound file jingles/end.mp3
+Sat 12:07:58 executing job Pool B - Match 2: start
+Sat 12:07:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sat 12:50:00 executing job Pool B - Match 2: pre_end
+Sat 12:50:00 playing sound file jingles/pre_end.mp3
+Sat 12:55:00 executing job Pool B - Match 2: end
+Sat 12:55:00 playing sound file jingles/end.mp3
+[...]
+Sun 08:57:58 executing job 6A6B, 1A1B: start
+Sun 08:57:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 09:40:00 executing job 6A6B, 1A1B: pre_end
+Sun 09:40:00 playing sound file jingles/pre_end.mp3
+Sun 09:45:00 executing job 6A6B, 1A1B: end
+Sun 09:45:00 playing sound file jingles/end.mp3
+Sun 09:57:58 executing job Crossovers: start
+Sun 09:57:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 10:40:00 executing job Crossovers: pre_end
+Sun 10:40:00 playing sound file jingles/pre_end.mp3
+Sun 10:45:00 executing job Crossovers: end
+Sun 10:45:00 playing sound file jingles/end.mp3
+Sun 11:17:58 executing job Semis 5-12: start
+Sun 11:17:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 12:00:00 executing job Semis 5-12: pre_end
+Sun 12:00:00 playing sound file jingles/pre_end.mp3
+Sun 12:05:00 executing job Semis 5-12: end
+Sun 12:05:00 playing sound file jingles/end.mp3
+Sun 12:17:58 executing job Semis 1-4: start
+Sun 12:17:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 13:00:00 executing job Semis 1-4: pre_end
+Sun 13:00:00 playing sound file jingles/pre_end.mp3
+Sun 13:05:00 executing job Semis 1-4: end
+Sun 13:05:00 playing sound file jingles/end.mp3
+Sun 13:07:58 executing job Placement 5-12: start
+Sun 13:07:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 13:50:00 executing job Placement 5-12: pre_end
+Sun 13:50:00 playing sound file jingles/pre_end.mp3
+Sun 13:55:00 executing job Placement 5-12: end
+Sun 13:55:00 playing sound file jingles/end.mp3
+Sun 13:57:58 executing job Place 3: start
+Sun 13:57:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 14:22:58 executing job Final: start
+Sun 14:22:58 playing sound file jingles/ok_lets_go_remix.mp3
+Sun 14:40:00 executing job Place 3: pre_end
+Sun 14:40:00 playing sound file jingles/pre_end.mp3
+Sun 14:45:00 executing job Place 3: end
+Sun 14:45:00 playing sound file jingles/end.mp3
+Sun 15:05:00 executing job Final: pre_end
+Sun 15:05:00 playing sound file jingles/pre_end.mp3
+Sun 15:10:00 executing job Final: end
+Sun 15:10:00 playing sound file jingles/end.mp3
 ```
 
 # License
