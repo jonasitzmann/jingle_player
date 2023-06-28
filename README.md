@@ -44,6 +44,60 @@ python script.py [--config CONFIG_FILE]
 ```
 
 `--config` (optional): Specify the path to a Python config file to override the default configuration.
+
+## Example output
+```
+2023-06-28 10:14:44 INFO   starting jingle player
+2023-07-01 09:00:44 INFO   executing job	Spiel 1: pre_game
+2023-07-01 09:00:44 INFO   pause spotify
+2023-07-01 09:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
+2023-07-01 09:00:44 INFO   play_pause spotify
+2023-07-01 09:00:44 INFO   executing job	Spiel 1: start
+2023-07-01 09:00:44 INFO   pause spotify
+2023-07-01 09:00:44 INFO   playing sound file jingles/start.mp3
+2023-07-01 09:00:44 INFO   play_pause spotify
+2023-07-01 09:40:44 INFO   executing job	Spiel 1: pre_end
+2023-07-01 09:40:44 INFO   pause spotify
+2023-07-01 09:40:44 INFO   playing sound file jingles/pre_end.mp3
+2023-07-01 09:40:44 INFO   play_pause spotify
+2023-07-01 09:45:44 INFO   executing job	Spiel 1: end
+2023-07-01 09:45:44 INFO   pause spotify
+2023-07-01 09:45:44 INFO   playing sound file jingles/end.mp3
+2023-07-01 09:45:44 INFO   play_pause spotify
+2023-07-01 10:00:44 INFO   executing job	Spiel 2: pre_game
+2023-07-01 10:00:44 INFO   pause spotify
+2023-07-01 10:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
+2023-07-01 10:00:44 INFO   play_pause spotify
+2023-07-01 10:00:44 INFO   executing job	Spiel 2: start
+2023-07-01 10:00:44 INFO   pause spotify
+2023-07-01 10:00:44 INFO   playing sound file jingles/start.mp3
+2023-07-01 10:00:44 INFO   play_pause spotify
+2023-07-01 10:40:44 INFO   executing job	Spiel 2: pre_end
+2023-07-01 10:40:44 INFO   pause spotify
+2023-07-01 10:40:44 INFO   playing sound file jingles/pre_end.mp3
+2023-07-01 10:40:44 INFO   play_pause spotify
+2023-07-01 10:45:44 INFO   executing job	Spiel 2: end
+2023-07-01 10:45:44 INFO   pause spotify
+2023-07-01 10:45:44 INFO   playing sound file jingles/end.mp3
+2023-07-01 10:45:44 INFO   play_pause spotify
+2023-07-02 14:00:44 INFO   executing job	Finale: pre_game
+2023-07-02 14:00:44 INFO   pause spotify
+2023-07-02 14:00:44 INFO   playing sound file jingles/start_minus_5s.mp3
+2023-07-02 14:00:44 INFO   play_pause spotify
+2023-07-02 14:00:44 INFO   executing job	Finale: start
+2023-07-02 14:00:44 INFO   pause spotify
+2023-07-02 14:00:44 INFO   playing sound file jingles/start.mp3
+2023-07-02 14:00:44 INFO   play_pause spotify
+2023-07-02 14:40:44 INFO   executing job	Finale: pre_end
+2023-07-02 14:40:44 INFO   pause spotify
+2023-07-02 14:40:44 INFO   playing sound file jingles/pre_end.mp3
+2023-07-02 14:40:44 INFO   play_pause spotify
+2023-07-02 14:45:44 INFO   executing job	Finale: end
+2023-07-02 14:45:44 INFO   pause spotify
+2023-07-02 14:45:44 INFO   playing sound file jingles/end.mp3
+2023-07-02 14:45:44 INFO   play_pause spotify
+```
+
 # License
 
 This script is released under the MIT License.
