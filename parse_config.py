@@ -68,7 +68,7 @@ class MockingConfig:
             mock_spotify=True,
             mock_jingle_playback=True,
             simulate_waiting=True,
-            begin_before_1st_job=timedelta(minutes=5)
+            begin_before_1st_job=None,
         )
 
     @staticmethod
