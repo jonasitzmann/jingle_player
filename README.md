@@ -1,4 +1,4 @@
-# Game Scheduler
+# Jingle Player
 
 This is a Python script for scheduling and playing jingles based on a calendar of games.
 
