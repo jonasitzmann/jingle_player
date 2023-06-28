@@ -43,10 +43,13 @@ def run(cfg: Config):
         play_jingle_blocking, pytify=pytify, mock=mock.mock_jingle_playback
     )
     scheduler = schedule_jingles(games, cfg.jingles.jingles, play_jingle_func)
-    scheduler.main_loop(
-        simulate_waiting=mock.simulate_waiting,
-        begin_before_1st_job=mock.begin_before_1st_job,
-    )
+    try:
+        scheduler.main_loop(
+            simulate_waiting=mock.simulate_waiting,
+            begin_before_1st_job=mock.begin_before_1st_job,
+        )
+    except KeyboardInterrupt:
+        ...
 
 
 def parse_args():
