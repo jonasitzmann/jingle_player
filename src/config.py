@@ -9,8 +9,8 @@ from pytimeparse.timeparse import timeparse
 
 
 class Anchor(Enum):
-    begin = 'begin'
-    end = 'end'
+    begin = "begin"
+    end = "end"
 
 
 @dataclass
@@ -23,7 +23,7 @@ class Jingle:
 
     def __post_init__(self):
         if self.soundfile is None:
-            self.soundfile = Path(self.name + '.mp3')
+            self.soundfile = Path(self.name + ".mp3")
         if isinstance(self.offset, str):
             self.offset = timedelta(seconds=timeparse(self.offset))
         if isinstance(self.anchor, str):
@@ -34,16 +34,16 @@ class Jingle:
 class JingleConfig:
     _ = KW_ONLY
     jingles: List[Jingle] = None
-    jingle_dir: Path = Path('jingles')
+    jingle_dir: Path = Path("jingles")
 
     def __post_init__(self):
         if not self.jingles:
-            logging.warning('no jingles configured!')
+            logging.warning("no jingles configured!")
             self.jingles = []
         for jingle in self.jingles:
             jingle.soundfile = self.jingle_dir / jingle.soundfile
             if not jingle.soundfile.is_file():
-                logging.warning(f'sound file does not exist: {jingle.soundfile}')
+                logging.warning(f"sound file does not exist: {jingle.soundfile}")
 
 
 @dataclass
@@ -77,7 +77,7 @@ class MockingConfig:
             mock_spotify=False,
             mock_jingle_playback=False,
             simulate_waiting=False,
-            begin_before_1st_job=None
+            begin_before_1st_job=None,
         )
 
 
