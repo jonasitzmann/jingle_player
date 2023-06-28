@@ -9,7 +9,7 @@ Python 3.x
 External libraries: `pandas`, `playsound`, `pytz`, `freezegun`, `icalendar`, `pytify`, `pytimeparse`
 # Installation
 
-Clone the repository or download the script file.
+Clone the repository.
 Install the required external libraries using `pip`:
 ```
 pip install pandas playsound pytz freezegun icalendar pytify pytimeparse
