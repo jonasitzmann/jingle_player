@@ -2,7 +2,7 @@ from datetime import timezone
 import urllib.request
 import pytz
 from icalendar import Calendar
-from parse_config import CalendarConfig
+from config import CalendarConfig
 
 from datastructures import Game
 
@@ -45,13 +45,3 @@ def get_games_from_cfg(cfg: CalendarConfig):
         calendar_file=cfg.calendar_file,
         download=cfg.download_calendar
     )
-
-
-def main():
-    calendar_url = 'https://calendar.google.com/calendar/ical/03ad48c1cf1d6a6a72575a04772c120c3c36be6849ab092f8ca0cce60a0cf9c3%40group.calendar.google.com/private-780b02e544d0d219d19aafe3ff3342cc/basic.ics'
-    games = get_games(calendar_url, True)
-    print('\n'.join([str(game) for game in games]))
-
-
-if __name__ == '__main__':
-    main()

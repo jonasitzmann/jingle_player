@@ -35,6 +35,7 @@ class Scheduler:
         return due_jobs
 
     def _main_loop(self, wait_fn=None):
+        logging.info('starting jingle player')
         wait_fn = wait_fn or partial(time.sleep, 1)
         while not self.jobs.empty:
             due_jobs = self.get_due_jobs()
@@ -59,20 +60,3 @@ class Scheduler:
             return self.main_loop_simulated(simulate_waiting=simulate_waiting, begin_before_1st_job=begin_before_1st_job)
         else:
             return self._main_loop()
-
-
-def main():
-    logging.basicConfig(format='%(asctime)s %(levelname)-6s %(message)s', level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
-    scheduler = Scheduler()
-    now = datetime.now(scheduler.tz)
-    for i in range(3):
-        t = now + timedelta(seconds=i)
-        scheduler.add_job(partial(print, i), t, i)
-    scheduler.main_loop(
-        simulate_waiting=False,
-        begin_before_1st_job=timedelta(seconds=3)
-    )
-
-
-if __name__ == '__main__':
-    main()

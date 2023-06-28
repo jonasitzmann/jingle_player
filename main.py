@@ -8,7 +8,7 @@ from typing import List, Optional
 from scheduler import Scheduler
 from argparse import ArgumentParser
 from runpy import run_path
-from parse_config import Config, Anchor, Jingle
+from config import Config, Anchor, Jingle
 
 
 def schedule_jingles(game_list: List[Game], jingle_list: List[Jingle], play_jingle_func, scheduler: Optional[Scheduler]=None):
@@ -37,7 +37,7 @@ def run(cfg: Config):
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument('--config', default='config.py')
+    parser.add_argument('--config', default='configs/example_config.py')
     args = parser.parse_args()
     return args
 
