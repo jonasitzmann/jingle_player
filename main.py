@@ -4,7 +4,7 @@ from functools import partial
 from runpy import run_path
 from typing import List, Optional
 
-from src import calendar_handling, spotify
+from src import calendar_handling
 from src.config import Config, Anchor, Jingle
 from src.datastructures import Game
 from src.play_jingle import play_jingle_blocking
@@ -38,9 +38,10 @@ def run(cfg: Config):
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     games = calendar_handling.get_games_from_cfg(cfg.calendar)
-    pytify = spotify.get_pytify(mock=mock.mock_spotify)
     play_jingle_func = partial(
-        play_jingle_blocking, pytify=pytify, mock=mock.mock_jingle_playback
+        play_jingle_blocking,
+        mock_pytify=mock.mock_spotify,
+        mock=mock.mock_jingle_playback,
     )
     scheduler = schedule_jingles(games, cfg.jingles.jingles, play_jingle_func)
     try:

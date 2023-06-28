@@ -19,15 +19,22 @@ def get_pytify(mock=False):
 
 
 @contextmanager
-def pause_spotify(pytify: Optional[Pytifylib] = None, mock=False):
-    if pytify is None:
-        pytify = PytifyMock() if mock else get_pytify_class_by_platform()()
+def except_all():
     try:
+        yield
+    except Exception:
+        ...
+
+
+@contextmanager
+def pause_spotify(mock_pytify: False = None, mock=False):
+    if mock_pytify:
+        pytify = PytifyMock()
+    else:
+        with except_all():
+            pytify = get_pytify_class_by_platform()()
+    with except_all():
         pytify.pause()
-    except Exception as ex:
-        logging.warning(f"could not pause Spotify: \n {ex}")
     yield
-    try:
+    with except_all():
         pytify.play_pause()
-    except Exception as ex:
-        logging.warning(f"could not play_pause Spotify: \n {ex}")

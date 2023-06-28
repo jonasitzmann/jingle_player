@@ -12,7 +12,7 @@ def play_sound(sound_path=None, mock=False):
         playsound.playsound(sound_path, block=True)
 
 
-def play_jingle_blocking(sound_path=None, pytify=None, mock=False):
+def play_jingle_blocking(sound_path=None, mock_pytify=False, mock=False):
     sound_path = sound_path or "sound.mp3"
-    with spotify.pause_spotify(pytify, mock=mock):
+    with spotify.pause_spotify(mock_pytify, mock=mock):
         play_sound(sound_path, mock=mock)
