@@ -8,14 +8,17 @@ from src.config import (
 )
 
 mocking = (
-    MockingConfig.mock_nothing()
+    # MockingConfig.mock_nothing()
+    MockingConfig.mock_everything()
 )  # debugging options (e.g. simulate time, don't play sound, don't access spotify)
 mocking.begin_before_1st_job = timedelta(seconds=5)
+mocking.simulate_waiting = False
 
 calendar = CalendarConfig(
     calendar_url="https://calendar.google.com/calendar/ical/03ad48c1cf1d6a6a72575a04772c120c3c36be6849ab092f8ca0cce60a0cf9c3%40group.calendar.google.com/private-780b02e544d0d219d19aafe3ff3342cc/basic.ics",
     calendar_file="../schedule.ics",
-    download_calendar=True,
+    # download_calendar=True,
+    download_calendar=False,
 )
 
 jingles = JingleConfig(

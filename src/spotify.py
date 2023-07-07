@@ -8,10 +8,10 @@ from pytify.pytifylib import Pytifylib
 
 class PytifyMock:
     def pause(self):
-        logging.info("pause spotify")
+        logging.debug("pause spotify")
 
     def play_pause(self):
-        logging.info("play_pause spotify")
+        logging.debug("play_pause spotify")
 
 
 def get_pytify(mock=False):

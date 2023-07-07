@@ -5,3 +5,4 @@ freezegun~=1.2.2
 playsound~=1.3.0
 icalendar~=5.0.7
 pytimeparse~=1.1.8
+mutagen~=1.46.0

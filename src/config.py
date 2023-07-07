@@ -4,6 +4,7 @@ from datetime import timedelta
 from enum import Enum
 from pathlib import Path
 from typing import List, Optional
+from mutagen.mp3 import MP3
 
 from pytimeparse.timeparse import timeparse
 
@@ -20,6 +21,7 @@ class Jingle:
     soundfile: Path | str = None
     anchor: Anchor | str = Anchor.begin
     offset: timedelta | str = timedelta(0)
+    time_on_end: bool = False
 
     def __post_init__(self):
         if self.soundfile is None:
@@ -44,6 +46,9 @@ class JingleConfig:
             jingle.soundfile = self.jingle_dir / jingle.soundfile
             if not jingle.soundfile.is_file():
                 logging.warning(f"sound file does not exist: {jingle.soundfile}")
+            elif jingle.time_on_end:
+                jingle_duration_sec = MP3(jingle.soundfile).info.length
+                jingle.offset -= timedelta(seconds=jingle_duration_sec)
 
 
 @dataclass
@@ -68,7 +73,7 @@ class MockingConfig:
             mock_spotify=True,
             mock_jingle_playback=True,
             simulate_waiting=True,
-            begin_before_1st_job=None,
+            begin_before_1st_job=timedelta(seconds=10),
         )
 
     @staticmethod

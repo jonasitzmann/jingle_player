@@ -33,9 +33,10 @@ def schedule_jingles(
 def run(cfg: Config):
     mock = cfg.mocking
     logging.basicConfig(
-        format="%(asctime)s %(levelname)-6s %(message)s",
+        format="%(asctime)s %(message)s",
         level=logging.INFO,
-        datefmt="%Y-%m-%d %H:%M:%S",
+        # datefmt="%Y-%m-%d %H:%M:%S",
+        datefmt="%a %H:%M:%S",
     )
     games = calendar_handling.get_games_from_cfg(cfg.calendar)
     play_jingle_func = partial(
