@@ -4,6 +4,11 @@ from typing import Optional
 
 from pytify.cli import get_pytify_class_by_platform
 from pytify.pytifylib import Pytifylib
+import pytify
+from src.pytify_dbus_interface_override import Interface as InterfaceOverride
+from pytify.dbus import interface
+
+interface.Interface = InterfaceOverride
 
 
 class PytifyMock:

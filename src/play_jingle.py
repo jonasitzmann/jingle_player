@@ -1,6 +1,6 @@
 import logging
 
-import playsound
+import playsound  # modified so that jingles can be stopped!
 
 from src import spotify
 
