@@ -56,7 +56,7 @@ def run(cfg: Config):
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument("--config", default="configs/example_config.py")
+    parser.add_argument("--config", default="configs/config.py")
     args = parser.parse_args()
     return args
 
