@@ -3,20 +3,22 @@
 This is a Python script for scheduling and playing jingles based on a calendar of games.
 
 [![Video](https://img.youtube.com/vi/VPrawxp-m2Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=VPrawxp-m2Q)
-# Requirements
 
-Python 3.x
-External libraries: `pandas`, `playsound`, `pytz`, `freezegun`, `icalendar`, `pytify`, `pytimeparse`
 # Installation
 
-Clone the repository.
-Install the required external libraries using `pip`:
-```
-pip install pandas playsound pytz freezegun icalendar pytify pytimeparse
-```
+- Clone the repository:  
+`git clone https://github.com/jonasitzmann/jingle_player.git`  
+
+
+- Install [anaconda](https://www.anaconda.com/download)
+- Create a new python 3.10 conda environment named 'jingleplayer':  
+  ```conda env create -f environment.yml```  
+  (Alternatively, manually install the dependencies listed in `environment.yml`)
+- activate the environment:  
+  `conda activate jingleplayer`
 # Configuration
 
-To configure the script, modify the example config file `config.py`. Adjust the settings for jingles, calendar, and mocking according to your needs.
+To configure the script, modify the config file `config.py`. Adjust the settings for jingles, calendar, and mocking according to your needs.
 
 Calendar Configuration
 The script supports two ways of providing the game calendar:
@@ -37,14 +39,14 @@ The script provides mocking options for debugging purposes. You can customize th
 - `begin_before_1st_job`: Set a `timedelta` value to specify the time to begin before the first scheduled job. Set to `None` to start at the acutual current time.
 
 # Running the Script
-
-To run the script, execute the following command:
-
-```
-python script.py [--config CONFIG_FILE]
-```
+ - cd into the directory 'jingleplayer'
+ - execute the following command:  
+`
+python main.py [--config CONFIG_FILE]
+`
 
 `--config` (optional): Specify the path to a Python config file to override the default configuration.
+
 
 ## Example output
 ```
