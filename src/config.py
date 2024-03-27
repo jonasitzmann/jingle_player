@@ -36,9 +36,10 @@ class Jingle:
 class JingleConfig:
     _ = KW_ONLY
     jingles: List[Jingle] = None
-    jingle_dir: Path = Path("jingles")
+    jingle_dir: Optional[Path|str] = Path("jingles")
 
     def __post_init__(self):
+        self.jingle_dir = Path(self.jingle_dir)
         if not self.jingles:
             logging.warning("no jingles configured!")
             self.jingles = []
