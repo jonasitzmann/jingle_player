@@ -20,7 +20,7 @@ calendar = CalendarConfig(
 )
 
 jingles = JingleConfig(
-    jingle_dir='sturmfrei',
+    jingle_dir='/home/guest/sturmfrei/jingles/',
     jingles=[
         Jingle("start", soundfile="start_jingle.mp3"),
         Jingle("2 min. left", offset="-2m", anchor="end", soundfile="2_minutes_left_jingle.mp3"),
