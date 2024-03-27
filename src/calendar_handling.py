@@ -1,3 +1,4 @@
+import logging
 import urllib.request
 from datetime import timezone
 
@@ -20,14 +21,22 @@ def get_games_from_calendar(calendar: Calendar, tz: timezone = None):
 
 
 def load_calendar(ical_file="schedule.ics"):
-    with open(ical_file, "rb") as file:
-        content = file.read()
+    try:
+        with open(ical_file, "rb") as file:
+            content = file.read()
+    except Exception as e:
+        raise FileNotFoundError(f"could not load calendar file {ical_file}: {e}")
+    logging.info(f"loaded calendar from {ical_file}")
     calendar = Calendar.from_ical(content)
     return calendar
 
 
 def download_calendar(calendar_url=None, ical_file="schedule.ics"):
-    urllib.request.urlretrieve(calendar_url, ical_file)
+    try:
+        urllib.request.urlretrieve(calendar_url, ical_file)
+        logging.info(f"downloaded calendar from {calendar_url}.\nsaved to {ical_file}")
+    except Exception as e:
+        logging.warning(f"could not download calendar from {calendar_url}: {e}")
     return load_calendar(ical_file)
 
 
