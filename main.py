@@ -5,10 +5,11 @@ from runpy import run_path
 from typing import List, Optional
 
 from src import calendar_handling
-from src.config import Config, Anchor, Jingle
+from src.config import Config, Anchor, Jingle, MockingConfig
 from src.datastructures import Game
 from src.play_jingle import play_jingle_blocking
 from src.scheduler import Scheduler
+from datetime import timedelta
 
 
 def schedule_jingles(
@@ -57,13 +58,41 @@ def run(cfg: Config):
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument("--config", default="configs/config.py")
+    parser.add_argument("--interactive", action="store_true")
     args = parser.parse_args()
     return args
+
+
+def get_interactive_mocking_options():
+    mocking_config = MockingConfig.mock_nothing()
+    x = input("begin 5 seconds before 1st jingle? [y/n] (Enter for 'No') and skip further options\n")
+    if x == "y":
+        mocking_config.begin_before_1st_job = timedelta(seconds=5)
+    elif x == "":
+        return mocking_config
+    x = input("simulate waiting? [y/n] (Enter for 'No') and skip further options\n")
+    if x == "y":
+        mocking_config.simulate_waiting = True
+    elif x == "":
+        return mocking_config
+    x = input("mock spotify? [y/n] (Enter for 'No') and skip further options\n")
+    if x == "y":
+        mocking_config.mock_spotify = True
+    elif x == "":
+        return mocking_config
+    x = input("mock jingle playback? [y/n] (Enter for 'No') and skip further options\n")
+    if x == "y":
+        mocking_config.mock_jingle_playback = True
+    elif x == "":
+        return mocking_config
+    return mocking_config
 
 
 def main():
     args = parse_args()
     cfg: Config = run_path(args.config)["config"]
+    if args.interactive:
+        cfg.mocking = get_interactive_mocking_options()
     run(cfg)
 
 

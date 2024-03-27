@@ -3,9 +3,13 @@ from contextlib import contextmanager
 
 from pytify.cli import get_pytify_class_by_platform
 from src.pytify_dbus_interface_override import Interface as InterfaceOverride
-from pytify.dbus import interface
 
-interface.Interface = InterfaceOverride
+try:
+    from pytify.dbus import interface
+    interface.Interface = InterfaceOverride
+except ImportError:
+    ...
+
 
 
 class PytifyMock:

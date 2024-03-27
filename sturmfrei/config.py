@@ -10,7 +10,7 @@ from src.config import (
 mocking = (
     MockingConfig.mock_nothing()
 )  # debugging options (e.g. simulate time, don't play sound, don't access spotify)
-mocking.begin_before_1st_job = timedelta(seconds=5)  #  uncomment to start just before 1st jingle
+# mocking.begin_before_1st_job = timedelta(seconds=5)  #  uncomment to start just before 1st jingle
 # mocking.simulate_waiting = True  # uncomment this to fast-forward in time
 
 calendar = CalendarConfig(
@@ -23,7 +23,7 @@ jingles = JingleConfig(
     jingle_dir='sturmfrei',
     jingles=[
         Jingle("start", soundfile="start_jingle.mp3"),
-        Jingle("pre_end", offset="-5m", anchor="end", soundfile="5_minutes_left_jingle.mp3"),
+        Jingle("2 min. left", offset="-2m", anchor="end", soundfile="2_minutes_left_jingle.mp3"),
         Jingle("end", anchor="end", soundfile="end_jingle.mp3"),
     ]
 )

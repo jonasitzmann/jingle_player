@@ -1,5 +1,8 @@
 from __future__ import absolute_import, unicode_literals
-import dbus
+try:
+    import dbus
+except ImportError:
+    print('Please install the python-dbus package.')
 import sys
 
 
