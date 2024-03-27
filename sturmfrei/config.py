@@ -14,7 +14,7 @@ mocking = (
 # mocking.simulate_waiting = True  # uncomment this to fast-forward in time
 
 calendar = CalendarConfig(
-    calendar_url="https://calendar.google.com/calendar/ical/734a4357b947c75cb33fa845522d63f5b4dd36b5f1225721bd021418ada300ea%40group.calendar.google.com/private-4d73fdab1dd47c7f620888ecd762de25/basic.ics",
+    calendar_url="https://calendar.google.com/calendar/ical/9e490a4dbdfa4234a4097860bcc4739bd79278827a7746cd594795c76096046a%40group.calendar.google.com/public/basic.ics",
     calendar_file="sturmfrei/schedule.ics",
     download_calendar=True,  # set to false for offline use (with ical file)
 )
