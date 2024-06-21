@@ -1,0 +1,32 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="19">
+            <item index="0" class="java.lang.String" itemvalue="Kivy" />
+            <item index="1" class="java.lang.String" itemvalue="cloup" />
+            <item index="2" class="java.lang.String" itemvalue="h5py" />
+            <item index="3" class="java.lang.String" itemvalue="cffi" />
+            <item index="4" class="java.lang.String" itemvalue="pycairo" />
+            <item index="5" class="java.lang.String" itemvalue="torch" />
+            <item index="6" class="java.lang.String" itemvalue="torchvision" />
+            <item index="7" class="java.lang.String" itemvalue="ManimPango" />
+            <item index="8" class="java.lang.String" itemvalue="netron" />
+            <item index="9" class="java.lang.String" itemvalue="ffpyplayer" />
+            <item index="10" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="11" class="java.lang.String" itemvalue="manim" />
+            <item index="12" class="java.lang.String" itemvalue="screeninfo" />
+            <item index="13" class="java.lang.String" itemvalue="filelock" />
+            <item index="14" class="java.lang.String" itemvalue="mapbox-earcut" />
+            <item index="15" class="java.lang.String" itemvalue="distlib" />
+            <item index="16" class="java.lang.String" itemvalue="grpcio" />
+            <item index="17" class="java.lang.String" itemvalue="rtmidi" />
+            <item index="18" class="java.lang.String" itemvalue="Pillow" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
