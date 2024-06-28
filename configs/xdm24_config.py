@@ -10,7 +10,7 @@ from src.config import (
 mocking = (
     MockingConfig.mock_nothing()
 )  # debugging options (e.g. simulate time, don't play sound, don't access spotify)
-mocking.begin_before_1st_job = timedelta(seconds=10)
+#mocking.begin_before_1st_job = timedelta(seconds=10)
 # mocking.simulate_waiting = True
 # mocking = mocking.mock_everything()
 
