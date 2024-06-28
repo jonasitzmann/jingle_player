@@ -57,7 +57,7 @@ def run(cfg: Config):
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument("--config", default="configs/config.py")
+    parser.add_argument("--config", default="configs/mucho_gusto_cup_cfg.py")
     parser.add_argument("--interactive", action="store_true")
     args = parser.parse_args()
     return args
