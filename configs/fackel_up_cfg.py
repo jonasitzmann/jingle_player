@@ -10,12 +10,12 @@ from src.config import (
 mocking = (
     MockingConfig.mock_nothing()
 )  # debugging options (e.g. simulate time, don't play sound, don't access spotify)
-mocking.begin_before_1st_job = timedelta(seconds=3)
+# mocking.begin_before_1st_job = timedelta(seconds=3)
 # mocking.simulate_waiting = True
 # mocking = mocking.mock_everything()
 
 calendar = CalendarConfig(
-    calendar_url="https://calendar.google.com/calendar/ical/10bd08c5ab7527e9d00dc60572cd11a83bdd0acd2d6791274d1b3426e401e0b8%40group.calendar.google.com/public/basic.ics",
+    calendar_url="https://calendar.google.com/calendar/ical/a8a96c310f25dc62b169b1de208393d93f8be47bedbeaff94d21f5fc9e3a5414%40group.calendar.google.com/public/basic.ics",
     calendar_file="fackelup.ics",
     download_calendar=True,
 )
