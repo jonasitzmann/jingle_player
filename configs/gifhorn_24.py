@@ -15,16 +15,16 @@ mocking = (
 # mocking = mocking.mock_everything()
 
 calendar = CalendarConfig(
-    calendar_url="https://calendar.google.com/calendar/ical/a8a96c310f25dc62b169b1de208393d93f8be47bedbeaff94d21f5fc9e3a5414%40group.calendar.google.com/public/basic.ics",
-    calendar_file="fackelup.ics",
+    calendar_url="https://calendar.google.com/calendar/ical/944deae1cbfb7842c01f6bacaeef5c03ae8be4c1037fd5d01ce2143ef15ddaba%40group.calendar.google.com/public/basic.ics",
+    calendar_file="gifhorn_24.ics",
     download_calendar=True,
 )
 
 jingles = JingleConfig(
     jingles=[
-        Jingle("Start", soundfile="fup24/start.mp3", offset="-30s"),
-        Jingle("5 min left", soundfile="fup24/5min.mp3", offset="-5m", anchor="end"),
-        Jingle("End", soundfile="fup24/end.mp3", anchor="end"),
+        Jingle("Start", soundfile="gifhorn_24/start.mp3", offset="-30s"),
+        Jingle("5 min left", soundfile="gifhorn_24/5min.mp3", offset="-5m", anchor="end"),
+        Jingle("End", soundfile="gifhorn_24/end.mp3", anchor="end"),
     ]
 )
 
